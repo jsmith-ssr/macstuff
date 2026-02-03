@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXLEMAP version="1.2" name="xfdfmap">
+
+  <TABLE name="Annots">
+    <TABLE-DESCRIPTION>CRFAnnotationExtract ion</TABLE-DESCRIPTION>
+    <TABLE-PATH syntax="XPath">/xfdf/annots/freetext/contents-richtext/body/p</TABLE-PATH>
+
+    <COLUMN name="Page" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/@page</PATH>
+      <TYPE>numeric</TYPE>
+      <DATATYPE>integer</DATATYPE>
+      <LABEL>Raw page number beginning at zero</LABEL>
+    </COLUMN>
+	
+ <COLUMN name="color" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/@color</PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>string</DATATYPE>
+<LENGTH>200</LENGTH>
+      <LABEL>The HEX colour</LABEL>
+    </COLUMN>
+
+
+<COLUMN name="text" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/contents-richtext/body/p</PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>string</DATATYPE>
+      <LENGTH>200</LENGTH>
+      <LABEL>The Text</LABEL>
+    </COLUMN>
+
+<COLUMN name="var1" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/contents-richtext/body/p/span[1]</PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>string</DATATYPE>
+      <LENGTH>200</LENGTH>
+      <LABEL>Spanner1</LABEL>
+    </COLUMN>
+<COLUMN name="var2" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/contents-richtext/body/p/span[2]</PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>string</DATATYPE>
+      <LENGTH>200</LENGTH>
+      <LABEL>Spanner2</LABEL>
+    </COLUMN>
+
+<COLUMN name="var3" retain="Yes">
+      <PATH syntax="XPath">/xfdf/annots/freetext/contents-richtext/body/p/span[3]</PATH>
+      <TYPE>character</TYPE>
+      <DATATYPE>string</DATATYPE>
+      <LENGTH>200</LENGTH>
+      <LABEL>Spanner3</LABEL>
+    </COLUMN>
+
+  </TABLE>
+
+</SXLEMAP>
